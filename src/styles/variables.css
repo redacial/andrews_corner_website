@@ -78,6 +78,8 @@ section {
 .about-section {
   margin-bottom: var(--space-xl);
   padding-top: var(--space-md);
+  padding-bottom: var(--space-sm);
+  margin-top: var(--space-md);
 }
 
 #events {
@@ -85,10 +87,45 @@ section {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.02);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  padding: var(--space-xl) 0 var(--space-lg) 0;
-  border-bottom: 2px solid var(--walnut);
-  margin-bottom: var(--space-xl);
+  color: var(--cream);
+}
+
+.hero-content h1 {
+  color: var(--cream);
+}
+
+.hero-content .tagline {
+  color: var(--cream);
 }
 
 .institute-box {
@@ -99,12 +136,13 @@ section {
   margin-bottom: var(--space-xl);
 }
 
-#library h2 {
-  margin-top: var(--space-md);
+#library {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-md);
 }
 
-.donation-section {
-  margin-bottom: var(--space-xl);
+#library h2 {
+  margin-top: 0;
 }
 
 .library-box {
@@ -114,3 +152,33 @@ section {
   margin-top: var(--space-md);
 }
 
+.retreat-section {
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-lg);
+}
+
+.donation-section {
+  margin-bottom: var(--space-xl);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-md);
+}
+
+.donation-section h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.donation-section p {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+#contact {
+  background-color: rgba(0,0,0,0.02);
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+#contact h2 {
+  margin-top: 0;
+}

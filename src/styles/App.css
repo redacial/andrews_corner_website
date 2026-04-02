@@ -1,5 +1,5 @@
 /* ─── Shared Section Layout ─────────────────────────────────────────────── */
-section { padding: var(--space-lg) 0; border-bottom: none; }
+section { padding: var(--space-lg) 0; border-bottom: none; scroll-margin-top: var(--header-height); }
 section:nth-of-type(even) { background-color: rgba(0,0,0,0.02); }
 
 h2 { font-size: 2.5rem; margin-bottom: var(--space-md); text-align: center; }
