@@ -12,9 +12,12 @@
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.logo {
+  flex: 1;
 }
 
 .logo a {
@@ -28,9 +31,10 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-links a {
@@ -46,10 +50,71 @@
   border-bottom: 2px solid var(--walnut);
 }
 
+/* More dropdown */
+.more-dropdown {
+  position: relative;
+}
+
+.more-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  padding: 0;
+}
+
+.more-btn.active {
+  color: var(--walnut);
+  font-weight: 700;
+}
+
+.more-btn:hover {
+  color: var(--walnut);
+}
+
+.more-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  background-color: var(--white);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.more-menu li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.more-menu li a:hover {
+  color: var(--walnut);
+  background-color: var(--cream);
+}
+
+.more-menu li a.active {
+  color: var(--walnut);
+  font-weight: 700;
+}
+
 .lang-switcher {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: flex-end;
 }
 
 .lang-switcher button {

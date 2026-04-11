@@ -29,6 +29,8 @@ const translations: Record<Language, Record<string, string>> = {
     'library.title': 'Η Βιβλιοθήκη μας',
     'events.title': 'Εκδηλώσεις & Ωράριο Λειτουργίας',
     'retreat.title': 'Retreat & Σαββατοκύριακα',
+    'nav.gallery': 'Γκαλερί',
+    'nav.more': 'Περισσότερα',
   },
   en: {
     'nav.home': 'Home',
@@ -49,6 +51,8 @@ const translations: Record<Language, Record<string, string>> = {
     'library.title': 'Library Catalog',
     'events.title': 'Events & Opening Hours',
     'retreat.title': 'Retreat & Sabbatical Information',
+    'nav.gallery': 'Gallery',
+    'nav.more': 'More',
   }
 };
 

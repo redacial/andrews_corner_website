@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
@@ -6,24 +6,48 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
+  const moreRef = useRef<HTMLLIElement>(null);
 
-  const navLinks = [
+  const mainLinks = [
     { path: '/', label: t('nav.about') },
     { path: '/library', label: t('nav.library') },
     { path: '/events', label: t('nav.events') },
-    { path: '/donate', label: t('nav.donate') },
-    { path: '/retreat', label: t('nav.retreat') },
+    { path: '/gallery', label: t('nav.gallery') },
   ];
 
-  const filteredLinks = language === 'el'
-    ? navLinks.filter(l => l.path !== '/retreat')
-    : navLinks;
+  const moreLinks = language === 'el'
+    ? [{ path: '/donate', label: t('nav.donate') }]
+    : [
+        { path: '/donate', label: t('nav.donate') },
+        { path: '/retreat', label: t('nav.retreat') },
+      ];
 
   const mobileLinks = [
     { path: '/', label: t('nav.home') },
-    ...filteredLinks.filter(l => l.path !== '/'),
+    { path: '/library', label: t('nav.library') },
+    { path: '/events', label: t('nav.events') },
+    { path: '/gallery', label: t('nav.gallery') },
+    { path: '/donate', label: t('nav.donate') },
+    ...(language === 'el' ? [] : [{ path: '/retreat', label: t('nav.retreat') }]),
   ];
+
+  // Close "More" dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close "More" dropdown on route change
+  useEffect(() => {
+    setMoreOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className="navbar">
@@ -47,7 +71,7 @@ const Navbar: React.FC = () => {
 
         {/* Desktop nav links */}
         <ul className="nav-links">
-          {filteredLinks.map(link => (
+          {mainLinks.map(link => (
             <li key={link.path}>
               <Link
                 to={link.path}
@@ -57,6 +81,31 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
           ))}
+
+          {/* More dropdown */}
+          <li className="more-dropdown" ref={moreRef}>
+            <button
+              className={`more-btn ${moreLinks.some(l => l.path === location.pathname) ? 'active' : ''}`}
+              onClick={() => setMoreOpen(!moreOpen)}
+            >
+              {t('nav.more')} <span style={{ fontSize: '0.7rem', verticalAlign: 'middle' }}>▼</span>
+            </button>
+            {moreOpen && (
+              <ul className="more-menu">
+                {moreLinks.map(link => (
+                  <li key={link.path}>
+                    <Link
+                      to={link.path}
+                      className={location.pathname === link.path ? 'active' : ''}
+                      onClick={() => setMoreOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         </ul>
 
         {/* Language switcher */}
