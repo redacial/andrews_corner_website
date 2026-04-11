@@ -93,3 +93,24 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
   padding: var(--space-md) 0;
   text-align: center;
 }
+
+.hours-section {
+  margin-bottom: var(--space-lg);
+}
+
+#events {
+  padding-top: var(--space-sm);
+}
+
+#retreat {
+  padding-top: var(--space-sm);
+}
+
+.hours-section h3 {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+#hours {
+  padding-top: var(--space-sm);
+}

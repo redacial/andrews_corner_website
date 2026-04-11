@@ -76,7 +76,7 @@ section {
 
 /* Specific spacing for sections */
 .about-section {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
   padding-top: var(--space-md);
   padding-bottom: var(--space-sm);
   margin-top: var(--space-md);
