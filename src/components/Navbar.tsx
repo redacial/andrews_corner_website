@@ -66,7 +66,9 @@ const Navbar: React.FC = () => {
 
         {/* Logo */}
         <div className="logo">
-          <Link to="/">Andrew's Corner</Link>
+          <Link to="/">
+            <img src="/src/assets/logo.png" alt="Andrew's Corner" className="logo-img" />
+          </Link>
         </div>
 
         {/* Desktop nav links */}
