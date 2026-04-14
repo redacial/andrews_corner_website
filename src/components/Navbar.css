@@ -210,6 +210,8 @@
   height: 90px;
   width: auto;
   filter: invert(23%) sepia(15%) saturate(800%) hue-rotate(340deg) brightness(60%);
+  margin-top: 9px;
+  margin-right: 3 rem;
 }
 
 .logo {

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
 
@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
   const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
   const moreRef = useRef<HTMLLIElement>(null);
+  const navigate = useNavigate();
 
   const mainLinks = [
     { path: '/', label: t('nav.about') },
@@ -110,18 +111,17 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
 
-        {/* Language switcher */}
         <div className="lang-switcher">
           <button
             className={language === 'el' ? 'active' : ''}
-            onClick={() => setLanguage('el')}
+            onClick={() => { setLanguage('el'); navigate('/'); }}
           >
             ΕΛ
           </button>
           <span>|</span>
           <button
             className={language === 'en' ? 'active' : ''}
-            onClick={() => setLanguage('en')}
+            onClick={() => { setLanguage('en'); navigate('/'); }}
           >
             EN
           </button>

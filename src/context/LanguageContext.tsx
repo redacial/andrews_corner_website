@@ -14,7 +14,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.home': 'Αρχική',
     'nav.about': 'Ποιοι Είμαστε',
     'nav.library': 'Βιβλιοθήκη',
-    'nav.events': 'Εκδηλώσεις & Ωράριο',
+    'nav.events': 'Εκδηλώσεις',
     'nav.retreat': 'Πληροφορίες Retreat',
     'nav.contact': 'Επικοινωνία',
     'nav.donate': 'Δωρεά',
@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.title': 'Εκδηλώσεις & Ωράριο Λειτουργίας',
     'retreat.title': 'Retreat & Σαββατοκύριακα',
     'nav.gallery': 'Γκαλερί',
-    'nav.more': 'Περισσότερα',
+    'nav.more': 'Πιο',
   },
   en: {
     'nav.home': 'Home',
