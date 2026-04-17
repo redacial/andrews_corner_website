@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import logo from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -68,7 +69,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="logo">
           <Link to="/">
-            <img src="/src/assets/logo.png" alt="Andrew's Corner" className="logo-img" />
+            <img src={logo} alt="Andrew's Corner" className="logo-img" />
           </Link>
         </div>
 
