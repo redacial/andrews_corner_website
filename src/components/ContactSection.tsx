@@ -5,7 +5,7 @@ const contactInfo = {
   address: "Spartis 12, Thessaloniki 54640, Greece",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Spartis+12+Thessaloniki+54640+Greece",
   email: "StAndrewsCorner@gmail.com",
-  phone: "2310832265",
+  phone: "+30 2310 832 265",
   instagram: "andrewscorner.skg",
 };
 
