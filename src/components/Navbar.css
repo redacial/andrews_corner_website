@@ -109,7 +109,7 @@
 }
 
 .more-menu li a.active {
-  color: var(--blue-dark);
+  color: var(--walnut);
   font-weight: 700;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .mobile-menu li a.active {
-  color: var(--blue-dark);
+  color: var(--walnut);
   font-weight: 700;
 }
 

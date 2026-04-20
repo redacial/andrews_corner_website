@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 const staff = [
   {
     file: 'Vasilea1.jpg',
-    name: 'Vasilija',
+    name: 'Vasilea',
     bio: 'Bio coming soon.',
   },
   {
@@ -13,8 +13,8 @@ const staff = [
     bio: 'Bio coming soon.',
   },
   {
-    file: 'Myrto1.jpg',
-    name: 'Mirto',
+    file: 'Myrto2.jpg',
+    name: 'Myrto',
     bio: 'Bio coming soon.',
   },
 ];
