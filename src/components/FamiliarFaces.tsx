@@ -8,13 +8,13 @@ const staff = [
     bio: 'Bio coming soon.',
   },
   {
-    file: 'Mixalis.jpg',
-    name: 'Mixalis',
+    file: 'Myrto2.jpg',
+    name: 'Myrto',
     bio: 'Bio coming soon.',
   },
   {
-    file: 'Myrto2.jpg',
-    name: 'Myrto',
+    file: 'Mixalis.jpg',
+    name: 'Mixalis',
     bio: 'Bio coming soon.',
   },
 ];
