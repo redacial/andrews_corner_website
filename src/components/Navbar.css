@@ -211,7 +211,7 @@
 .logo-img {
   height: 90px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: invert(23%) sepia(15%) saturate(800%) hue-rotate(340deg) brightness(60%);
   margin-top: 9px;
 }
 
