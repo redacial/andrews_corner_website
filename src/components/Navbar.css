@@ -44,14 +44,14 @@
 .nav-links a {
   font-family: var(--font-body);
   font-weight: 500;
-  color: var(--white);
+  color: var(--walnut);
   text-decoration: none;
 }
 
 .nav-links a.active {
-  color: var(--cream);
+  color: var(--walnut);
   font-weight: 700;
-  border-bottom: 2px solid var(--white);
+  border-bottom: 2px solid var(--walnut);
 }
 
 /* More dropdown */
@@ -65,18 +65,18 @@
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--walnut);
   cursor: pointer;
   padding: 0;
 }
 
 .more-btn.active {
-  color: var(--cream);
+  color: var(--walnut);
   font-weight: 700;
 }
 
 .more-btn:hover {
-  color: var(--cream);
+  color: var(--chestnut);
 }
 
 .more-menu {
@@ -126,7 +126,7 @@
   border: none;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--walnut);
   padding: 0.25rem 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -134,9 +134,9 @@
 }
 
 .lang-switcher button.active {
-  color: var(--white);
+  color: var(--walnut);
   font-weight: 700;
-  border-bottom: 2px solid var(--white);
+  border-bottom: 2px solid var(--walnut);
   opacity: 1;
 }
 
@@ -155,7 +155,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--walnut);
 }
 
 /* Mobile dropdown — hidden on desktop */

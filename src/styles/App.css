@@ -1,6 +1,6 @@
 /* ─── Shared Section Layout ─────────────────────────────────────────────── */
 section { padding: var(--space-lg) 0; border-bottom: none; scroll-margin-top: var(--header-height); }
-section:nth-of-type(even) { background-color: var(--blue-mid); }
+section:nth-of-type(even) { background-color: var(--cream); }
 
 h2 { font-size: 2.5rem; margin-bottom: var(--space-md); text-align: center; }
 h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
@@ -17,18 +17,18 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
 
 /* ─── About Section ──────────────────────────────────────────────────────── */
 .vision-box, .retreat-card {
-  background-color: var(--white);
+  background-color: var(--cream);
   padding: var(--space-md);
-  border: 1px solid var(--border-subtle);
-  border-left: 8px solid var(--blue-deep);
+  border: 1px solid var(--chestnut);
+  border-left: 8px solid var(--walnut);
   margin: var(--space-md) 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 20px rgba(74,55,40,0.06);
 }
 
 .institute-box {
-  background-color: var(--white);
+  background-color: var(--cream);
   padding: var(--space-md);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--chestnut);
   margin-bottom: var(--space-md);
 }
 
@@ -37,7 +37,7 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
 .event-card h3 { color: var(--walnut); text-align: left; margin-bottom: 0.5rem; }
 .event-card .date { font-weight: 700; color: var(--blue-deep); font-size: 1rem; margin-bottom: 0.5rem; }
 
-.hours-box { background: var(--white); padding: var(--space-sm); border: 1px solid var(--border-subtle); }
+.hours-box { background: var(--cream); padding: var(--space-sm); border: 2px solid var(--chestnut); border-radius: 4px; }
 .hours-box h3 { text-align: center; }
 .hours-table { width: 100%; border-collapse: collapse; }
 .hours-table td { padding: 1rem 0; border-bottom: 1px solid var(--warm-gray); font-size: 1.1rem; }
@@ -82,7 +82,7 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
 }
 .btn-primary:hover { background-color: var(--chestnut); transform: translateY(-2px); }
 
-.contact-info-side { background: var(--white); padding: var(--space-sm); border: 1px solid var(--border-subtle); }
+.contact-info-side { background: var(--cream); padding: var(--space-sm); border: 2px solid var(--chestnut); border-radius: 4px; }
 .contact-info-side h3 { margin-bottom: var(--space-sm); }
 .contact-info-side p { margin-bottom: 1.5rem; font-size: 1.1rem; }
 
@@ -130,6 +130,10 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
   align-items: center;
   gap: var(--space-sm);
   margin-bottom: 0.75rem;
+  background-color: var(--cream);
+  border: 2px solid var(--chestnut);
+  border-radius: 6px;
+  padding: var(--space-sm);
 }
 
 .carousel-arrow {
@@ -274,10 +278,10 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
 }
 
 .faq-item {
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--chestnut);
   margin-bottom: 0.75rem;
   border-radius: 4px;
-  background-color: var(--white);
+  background-color: var(--cream);
 }
 
 .faq-question {

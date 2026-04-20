@@ -157,9 +157,10 @@ section {
 }
 
 .library-box {
-  background-color: var(--white);
+  background-color: var(--cream);
   padding: var(--space-md);
-  border: 1px solid var(--border-subtle);
+  border: 2px solid var(--chestnut);
+  border-radius: 4px;
   margin-top: var(--space-md);
 }
 
