@@ -21,7 +21,7 @@
 - [x] **Photo carousel**: Built with prev/next arrows, thumbnail sidebar, counter
 - [x] **FamiliarFaces component**: Staff photo grid (Vasilea, Mixalis, Myrto)
 - [x] **Staff names corrected**: Myrto2 photo, correct names throughout
-- [x] **Owner names**: Andrew & Karly set correctly on OurStoryPage
+- [x] **Owner names**: Initially set to Andrew & Karly on OurStoryPage (later corrected to Daniel & Karly)
 - [x] **HoursSection**: Warm border added, owner names updated
 - [x] **OurStoryPage**: Created with staff bios section
 - [x] **MenuPage**: Created (placeholder for menu photo)
@@ -47,6 +47,15 @@
 - [x] **ContactSection directions**: Address now links to Google Maps with "Get Directions" / "Οδηγίες" label
 - [x] **Build errors fixed**: Removed unused `React` and `HoursSection` imports in App.tsx — production build now clean
 
+#### Content & Polish (Session 4 — Apr 20)
+- [x] **Owner names**: Changed from Andrew & Karly to Daniel & Karly on OurStoryPage
+- [x] **Familiar Faces order**: Reordered to Vasilea, Myrto (center), Mixalis (right)
+- [x] **Gallery cream background**: Full-width cream band matching About section style
+- [x] **FAQ photo links**: Stacks room → photo 5/20, Sinai Room → photo 19/20, Quiet Zone → photo 2/20
+- [x] **Phone number**: Reformatted to +30 2310 832 265 in ContactSection
+- [x] **John 12:20 reference**: Removed trailing "ff" in about.json Why Andrew's Corner paragraph
+- [x] **Bible verse tooltips**: Hover tooltips on John 12:20 and John 12:28 fetch live verse text from bible-api.com (World English Bible, public domain) — walnut styled popup with verse label
+
 ### Post-Launch Steps (manual — no code needed)
 - [ ] **Google Search Console**: Add domain, verify ownership, submit sitemap.xml
 - [ ] **Google Analytics**: Add GA4 script tag (or Plausible for privacy-friendly alternative)
@@ -57,5 +66,5 @@
 - [ ] Greek FAQ content (3 placeholders in FAQSection.tsx)
 - [ ] GiveButter embed code (DonatePage is placeholder)
 - [ ] Menu photo/PDF (MenuPage is placeholder)
-- [ ] Staff bios — Andrew, Karly, Vasilea, Mixalis, Myrto (all say "coming soon")
+- [ ] Staff bios — Daniel, Karly, Vasilea, Mixalis, Myrto (all say "coming soon")
 - [ ] Greek translations for About and Our Story sections (partial placeholders)
