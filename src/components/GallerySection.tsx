@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
-const photos = [
+const carouselPhotos = [
+  'Exterior2.jpg',
   'basement-1.jpg',
   'coffee.jpg',
   'corner-photo.jpg',
-  'Exterior2.jpg',
   'front-bookshelf-1.jpg',
   'front-bookshelf-2.jpg',
   'front-bookshelf-3.jpg',
@@ -19,14 +19,9 @@ const photos = [
   'main-room-3.jpg',
   'main-room-4.jpg',
   'main-room-people.jpg',
-  'Mixalis.jpg',
-  'Myrto1.jpg',
-  'Myrto2.jpg',
   'plant.jpg',
   'seminar-1.jpg',
   'seminar-2.jpg',
-  'Vasilea1.jpg',
-  'Vasilea2.jpg',
 ];
 
 const videos = [
@@ -52,26 +47,25 @@ const videos = [
   },
 ];
 
-const PHOTOS_PER_PAGE = 3;
+interface GallerySectionProps {
+  initialPhoto?: string;
+}
 
-const GallerySection: React.FC = () => {
+const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
   const { language } = useLanguage();
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const totalPages = Math.ceil(photos.length / PHOTOS_PER_PAGE);
+  const initialIndex = initialPhoto
+    ? carouselPhotos.indexOf(initialPhoto)
+    : 0;
 
-  const prev = () => {
-    setCurrentIndex(i => (i === 0 ? totalPages - 1 : i - 1));
-  };
+  const [current, setCurrent] = useState(initialIndex >= 0 ? initialIndex : 0);
 
-  const next = () => {
-    setCurrentIndex(i => (i === totalPages - 1 ? 0 : i + 1));
-  };
+  const total = carouselPhotos.length;
+  const prev = () => setCurrent(i => (i === 0 ? total - 1 : i - 1));
+  const next = () => setCurrent(i => (i === total - 1 ? 0 : i + 1));
 
-  const visiblePhotos = photos.slice(
-    currentIndex * PHOTOS_PER_PAGE,
-    currentIndex * PHOTOS_PER_PAGE + PHOTOS_PER_PAGE
-  );
+  const prevIdx = current === 0 ? total - 1 : current - 1;
+  const nextIdx = current === total - 1 ? 0 : current + 1;
 
   return (
     <section id="gallery" className="container gallery-section">
@@ -79,24 +73,38 @@ const GallerySection: React.FC = () => {
 
       {/* Photo Carousel */}
       <h3>{language === 'el' ? 'Φωτογραφίες' : 'Photos'}</h3>
-      <div className="carousel-wrapper">
-        <button className="carousel-arrow left" onClick={prev}>&#8592;</button>
-        <div className="carousel-track">
-          {visiblePhotos.map((photo, i) => (
-            <div key={i} className="carousel-slide">
-              <img
-                src={`/photos/${photo}`}
-                alt={photo.replace(/\.[^/.]+$/, '')}
-                className="carousel-img"
-              />
-            </div>
-          ))}
+      <div className="carousel">
+        <button className="carousel-arrow" onClick={prev} aria-label="Previous photo">&#8592;</button>
+
+        <div className="carousel-inner">
+          <div className="carousel-side" onClick={prev}>
+            <img
+              src={`/photos/${carouselPhotos[prevIdx]}`}
+              alt="previous"
+              className="carousel-thumb"
+            />
+          </div>
+
+          <div className="carousel-main">
+            <img
+              src={`/photos/${carouselPhotos[current]}`}
+              alt={carouselPhotos[current].replace(/\.[^/.]+$/, '')}
+              className="carousel-featured"
+            />
+          </div>
+
+          <div className="carousel-side" onClick={next}>
+            <img
+              src={`/photos/${carouselPhotos[nextIdx]}`}
+              alt="next"
+              className="carousel-thumb"
+            />
+          </div>
         </div>
-        <button className="carousel-arrow right" onClick={next}>&#8594;</button>
+
+        <button className="carousel-arrow" onClick={next} aria-label="Next photo">&#8594;</button>
       </div>
-      <p className="carousel-counter">
-        {currentIndex + 1} / {totalPages}
-      </p>
+      <p className="carousel-counter">{current + 1} / {total}</p>
 
       {/* Videos */}
       <h3 style={{ marginTop: 'var(--space-lg)' }}>

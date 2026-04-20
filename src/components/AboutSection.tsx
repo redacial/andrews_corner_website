@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import aboutData from '../data/about.json';
+import FamiliarFaces from './FamiliarFaces';
 
 const AboutSection: React.FC = () => {
   const { language } = useLanguage();
@@ -26,6 +27,8 @@ const AboutSection: React.FC = () => {
           <p key={i} className="content-p">{p}</p>
         ))}
       </div>
+
+      <FamiliarFaces />
     </section>
   );
 };

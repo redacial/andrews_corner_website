@@ -15,23 +15,31 @@ const Navbar: React.FC = () => {
   const mainLinks = [
     { path: '/', label: t('nav.about') },
     { path: '/library', label: t('nav.library') },
-    { path: '/events', label: t('nav.events') },
     { path: '/gallery', label: t('nav.gallery') },
+    { path: '/menu', label: t('nav.menu') },
   ];
 
   const moreLinks = language === 'el'
-    ? [{ path: '/donate', label: t('nav.donate') }]
+    ? [
+        { path: '/events', label: t('nav.events') },
+        { path: '/donate', label: t('nav.donate') },
+        { path: '/our-story', label: t('nav.our-story') },
+      ]
     : [
+        { path: '/events', label: t('nav.events') },
         { path: '/donate', label: t('nav.donate') },
         { path: '/retreat', label: t('nav.retreat') },
+        { path: '/our-story', label: t('nav.our-story') },
       ];
 
   const mobileLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/library', label: t('nav.library') },
-    { path: '/events', label: t('nav.events') },
     { path: '/gallery', label: t('nav.gallery') },
+    { path: '/menu', label: t('nav.menu') },
+    { path: '/events', label: t('nav.events') },
     { path: '/donate', label: t('nav.donate') },
+    { path: '/our-story', label: t('nav.our-story') },
     ...(language === 'el' ? [] : [{ path: '/retreat', label: t('nav.retreat') }]),
   ];
 

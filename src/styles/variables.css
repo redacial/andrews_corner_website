@@ -1,14 +1,25 @@
 :root {
-  /* Warm wood, bookish palette */
+  /* Blue-forward palette */
+  --blue-light: #e8f4ff;      /* lightest bg tint */
+  --blue-mid: #c5e4ff;        /* section tint / hover */
+  --blue-main: #a3d5ff;       /* primary brand blue */
+  --blue-deep: #6ab8f7;       /* borders, accents */
+  --blue-dark: #2a7ab8;       /* active states, links */
+
+  /* Warm accent (was primary — now tertiary) */
   --cream: #f9f7f2;
   --walnut: #4a3728;
   --chestnut: #7b5036;
+  --warm-gray: #dce8f5;       /* was e9edc9 — shifted blue-tinted */
+  --white: #ffffff;
+
+  /* Text */
+  --text-dark: #1a2a38;       /* deep blue-black */
+  --text-muted: #4a6080;      /* muted blue-gray */
+
+  /* Legacy aliases kept so nothing breaks */
   --olive: #6b705c;
   --sage: #a5a58d;
-  --warm-gray: #e9edc9;
-  --white: #ffffff;
-  --text-dark: #2c241e;
-  --text-muted: #5d534a;
 
   /* Typography */
   --font-serif: "Playfair Display", serif;
@@ -24,7 +35,7 @@
   /* Layout */
   --max-width: 900px; /* Narrower for better readability, like a book page */
   --header-height: 80px;
-  --border-subtle: #dcd7cc;
+  --border-subtle: #b8d8f0;
 }
 
 * {
@@ -35,7 +46,7 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--cream);
+  background-color: var(--blue-light);
   color: var(--text-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -43,19 +54,19 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  color: var(--walnut);
+  color: var(--blue-dark);
   font-weight: 700;
   line-height: 1.2;
 }
 
 a {
-  color: var(--chestnut);
+  color: var(--blue-dark);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--olive);
+  color: var(--walnut);
 }
 
 button {

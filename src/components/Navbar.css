@@ -1,7 +1,7 @@
 .navbar {
   height: var(--header-height);
-  background-color: var(--white);
-  border-bottom: 1px solid var(--warm-gray);
+  background-color: var(--blue-main);
+  border-bottom: 2px solid var(--blue-deep);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,7 +28,7 @@
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--walnut);
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -44,14 +44,14 @@
 .nav-links a {
   font-family: var(--font-body);
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--white);
   text-decoration: none;
 }
 
 .nav-links a.active {
-  color: var(--walnut);
+  color: var(--cream);
   font-weight: 700;
-  border-bottom: 2px solid var(--walnut);
+  border-bottom: 2px solid var(--white);
 }
 
 /* More dropdown */
@@ -65,32 +65,32 @@
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--white);
   cursor: pointer;
   padding: 0;
 }
 
 .more-btn.active {
-  color: var(--walnut);
+  color: var(--cream);
   font-weight: 700;
 }
 
 .more-btn:hover {
-  color: var(--walnut);
+  color: var(--cream);
 }
 
 .more-menu {
   position: absolute;
   top: calc(100% + 0.75rem);
   right: 0;
-  background-color: var(--white);
-  border: 1px solid var(--border-subtle);
+  background-color: var(--blue-mid);
+  border: 1px solid var(--blue-deep);
   border-radius: 4px;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
   min-width: 180px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 100;
 }
 
@@ -105,11 +105,11 @@
 
 .more-menu li a:hover {
   color: var(--walnut);
-  background-color: var(--cream);
+  background-color: var(--blue-light);
 }
 
 .more-menu li a.active {
-  color: var(--walnut);
+  color: var(--blue-dark);
   font-weight: 700;
 }
 
@@ -126,16 +126,18 @@
   border: none;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--white);
   padding: 0.25rem 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
 .lang-switcher button.active {
-  color: var(--walnut);
+  color: var(--white);
   font-weight: 700;
-  border-bottom: 2px solid var(--walnut);
+  border-bottom: 2px solid var(--white);
+  opacity: 1;
 }
 
 /* Hamburger — hidden on desktop */
@@ -153,7 +155,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--walnut);
+  background-color: var(--white);
 }
 
 /* Mobile dropdown — hidden on desktop */
@@ -161,8 +163,8 @@
   display: none;
   list-style: none;
   flex-direction: column;
-  background-color: var(--white);
-  border-top: 1px solid var(--warm-gray);
+  background-color: var(--blue-mid);
+  border-top: 1px solid var(--blue-deep);
   padding: var(--space-sm) 0;
   margin: 0;
 }
@@ -174,16 +176,16 @@
   font-weight: 500;
   color: var(--text-dark);
   text-decoration: none;
-  transition: font-weight 0.1s ease, text-decoration 0.1s ease;
+  transition: font-weight 0.1s ease;
 }
 
 .mobile-menu li a:hover {
   font-weight: 700;
-  text-decoration: underline;
+  color: var(--walnut);
 }
 
 .mobile-menu li a.active {
-  color: var(--walnut);
+  color: var(--blue-dark);
   font-weight: 700;
 }
 
@@ -209,9 +211,8 @@
 .logo-img {
   height: 90px;
   width: auto;
-  filter: invert(23%) sepia(15%) saturate(800%) hue-rotate(340deg) brightness(60%);
+  filter: brightness(0) invert(1);
   margin-top: 9px;
-  margin-right: 3 rem;
 }
 
 .logo {

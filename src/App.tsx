@@ -4,21 +4,22 @@ import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import GalleryPage from './pages/GalleryPage'; 
-
+import GalleryPage from './pages/GalleryPage';
 
 // Homepage sections
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import HoursSection from './components/HoursSection';
 import ContactSection from './components/ContactSection';
+import FAQSection from './components/FAQSection';
 
 // Pages
 import EventsPage from './pages/EventsPage';
 import LibraryPage from './pages/LibraryPage';
 import RetreatPage from './pages/RetreatPage';
 import DonatePage from './pages/DonatePage';
-import FAQSection from './components/FAQSection';
+import OurStoryPage from './pages/OurStoryPage';
+import MenuPage from './pages/MenuPage';
 
 import './styles/variables.css';
 import './styles/App.css';
@@ -48,6 +49,8 @@ function App() {
             <Route path="/retreat" element={<RetreatPage />} />
             <Route path="/donate" element={<DonatePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/our-story" element={<OurStoryPage />} />
+            <Route path="/menu" element={<MenuPage />} />
           </Routes>
           <Footer />
         </div>

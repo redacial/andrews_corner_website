@@ -31,6 +31,8 @@ const translations: Record<Language, Record<string, string>> = {
     'retreat.title': 'Retreat & Σαββατοκύριακα',
     'nav.gallery': 'Γκαλερί',
     'nav.more': 'Πιο',
+    'nav.menu': 'Μενού',
+    'nav.our-story': 'Η Ιστορία μας',
   },
   en: {
     'nav.home': 'Home',
@@ -49,10 +51,12 @@ const translations: Record<Language, Record<string, string>> = {
     'home.welcome': 'Welcome to Andrew\'s Corner',
     'home.tagline': 'A warm space for community, shared meals, and conversation in Thessaloniki.',
     'library.title': 'Library Catalog',
-    'events.title': 'Events & Opening Hours',
+    'events.title': 'Events',
     'retreat.title': 'Retreat & Sabbatical Information',
     'nav.gallery': 'Gallery',
     'nav.more': 'More',
+    'nav.menu': 'Menu',
+    'nav.our-story': 'Our Story',
   }
 };
 

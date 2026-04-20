@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
-const faqs = [
+type FAQ = {
+  question: string;
+  answer?: string;
+  answerJsx?: React.ReactNode;
+};
+
+const faqs: FAQ[] = [
   {
     question: "Can I reserve the space for a private event?",
-    answer: `Andrew's Corner is available on most Saturdays and Sundays, 18:00-22:00 for private rental.\n\nBasic (200 euros): Our main space seats up to 30-40 people comfortably. Large smart screen available for use.\nBasic + Refreshments (300 euros): Includes one drink per person from our menu.\nWine and Cheese, please! (300+ euros): If you would like to add a glass of wine and a cheese tray or other simple food, talk to us! We'll work something out.\n\nThe Sinai Room downstairs is also available for private bookings during working hours for 25€/hour. Capacity: 12-15 people.\n\n*The reservation is confirmed when a non-refundable 20% down payment is received. Cash or IBAN transfer only at this time.`,
+    answerJsx: (
+      <>
+        <p>Andrew's Corner is available on most Saturdays and Sundays, 18:00-22:00 for private rental.</p>
+        <p>Basic (200 euros): Our <Link to="/gallery?photo=main-room-3.jpg">main space</Link> seats up to 30-40 people comfortably. Large smart screen available for use.</p>
+        <p>Basic + Refreshments (300 euros): Includes one drink per person from our menu.</p>
+        <p>Wine and Cheese, please! (300+ euros): If you would like to add a glass of wine and a cheese tray or other simple food, talk to us! We'll work something out.</p>
+        <p>The <Link to="/gallery?photo=seminar-2.jpg">Sinai Room</Link> downstairs is also available for private bookings during working hours for 25€/hour. Capacity: 12-15 people.</p>
+        <p>*The reservation is confirmed when a non-refundable 20% down payment is received. Cash or IBAN transfer only at this time.</p>
+      </>
+    ),
   },
   {
     question: "Can I host an event at Andrew's Corner that is open to the public?",
@@ -28,7 +44,11 @@ const faqs = [
   },
   {
     question: "How can I find out if the library has a book I'm looking for?",
-    answer: `Search our library catalogue on the Library Catalog page. Please be patient as there are still inconsistencies and gaps in our library management system. In the meantime, any of our baristas can direct you to the right shelf. Karly or Daniel can also help you.`,
+    answerJsx: (
+      <>
+        <p>Search our library catalogue on the <Link to="/library">Library Catalog page</Link>. Please be patient as there are still inconsistencies and gaps in our library management system. In the meantime, any of our baristas can direct you to the right shelf. Karly or Daniel can also help you.</p>
+      </>
+    ),
   },
   {
     question: "In what languages are the books written?",
@@ -56,7 +76,7 @@ const faqs = [
   },
 ];
 
-const greekFaqs = [
+const greekFaqs: FAQ[] = [
   { question: "[ Ελληνική ερώτηση 1 ]", answer: "[ Ελληνική απάντηση 1 ]" },
   { question: "[ Ελληνική ερώτηση 2 ]", answer: "[ Ελληνική απάντηση 2 ]" },
   { question: "[ Ελληνική ερώτηση 3 ]", answer: "[ Ελληνική απάντηση 3 ]" },
@@ -84,9 +104,11 @@ const FAQSection: React.FC = () => {
             </button>
             {openIndex === index && (
               <div className="faq-answer">
-                {faq.answer.split('\n').map((line, i) => (
-                  line.trim() ? <p key={i}>{line}</p> : null
-                ))}
+                {faq.answerJsx
+                  ? faq.answerJsx
+                  : faq.answer!.split('\n').map((line, i) => (
+                      line.trim() ? <p key={i}>{line}</p> : null
+                    ))}
               </div>
             )}
           </div>
