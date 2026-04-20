@@ -17,7 +17,7 @@ const OurStoryPage: React.FC = () => {
           </div>
 
           <div className="our-story-bio">
-            <h3>{language === 'el' ? 'Andrew & Karly' : 'Andrew & Karly'}</h3>
+            <h3>{language === 'el' ? 'Daniel & Karly' : 'Daniel & Karly'}</h3>
             <p className="content-p">
               {language === 'el'
                 ? '[ Ελληνική βιογραφία εδώ ]'
