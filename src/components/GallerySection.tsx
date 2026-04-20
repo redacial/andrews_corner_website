@@ -69,6 +69,7 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
 
   return (
     <section id="gallery" className="container gallery-section">
+      <div className="retreat-card">
       <h2>{language === 'el' ? 'Γκαλερί' : 'Gallery'}</h2>
 
       {/* Photo Carousel */}
@@ -124,6 +125,7 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
             <p className="video-title">{video.title}</p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
