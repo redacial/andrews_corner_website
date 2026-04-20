@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const contactInfo = {
   address: "Spartis 12, Thessaloniki 54640, Greece",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Spartis+12+Thessaloniki+54640+Greece",
   email: "StAndrewsCorner@gmail.com",
   phone: "2310832265",
   instagram: "andrewscorner.skg",
@@ -95,7 +96,14 @@ const ContactSection: React.FC = () => {
 
       <div className="contact-info-side">
         <h3>{language === 'el' ? 'Πληροφορίες' : 'Contact Details'}</h3>
-        <p><strong>Address:</strong> {contactInfo.address}</p>
+        <p>
+          <strong>Address:</strong>{' '}
+          <a href={contactInfo.mapsUrl} target="_blank" rel="noreferrer">{contactInfo.address}</a>
+          {' — '}
+          <a href={contactInfo.mapsUrl} target="_blank" rel="noreferrer">
+            {language === 'el' ? 'Οδηγίες' : 'Get Directions'}
+          </a>
+        </p>
         <p><strong>Email:</strong> <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></p>
         <p><strong>Phone:</strong> {contactInfo.phone}</p>
         <p><strong>Instagram:</strong> <a href={`https://instagram.com/${contactInfo.instagram}`} target="_blank" rel="noreferrer">@{contactInfo.instagram}</a></p>

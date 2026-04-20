@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
@@ -9,7 +8,6 @@ import GalleryPage from './pages/GalleryPage';
 // Homepage sections
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import HoursSection from './components/HoursSection';
 import ContactSection from './components/ContactSection';
 import FAQSection from './components/FAQSection';
 
