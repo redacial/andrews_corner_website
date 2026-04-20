@@ -68,8 +68,8 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
   const nextIdx = current === total - 1 ? 0 : current + 1;
 
   return (
-    <section id="gallery" className="container gallery-section">
-      <div className="retreat-card">
+    <section id="gallery" className="gallery-section">
+      <div className="container">
       <h2>{language === 'el' ? 'Γκαλερί' : 'Gallery'}</h2>
 
       {/* Photo Carousel */}

@@ -119,6 +119,9 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
   padding-top: var(--space-sm);
 }
 
+.gallery-section {
+  background-color: var(--cream);
+}
 
 .gallery-section h3 {
   margin-bottom: var(--space-sm);
