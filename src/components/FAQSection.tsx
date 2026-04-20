@@ -17,7 +17,7 @@ const faqs: FAQ[] = [
         <p>Basic (200 euros): Our <Link to="/gallery?photo=main-room-3.jpg">main space</Link> seats up to 30-40 people comfortably. Large smart screen available for use.</p>
         <p>Basic + Refreshments (300 euros): Includes one drink per person from our menu.</p>
         <p>Wine and Cheese, please! (300+ euros): If you would like to add a glass of wine and a cheese tray or other simple food, talk to us! We'll work something out.</p>
-        <p>The <Link to="/gallery?photo=seminar-2.jpg">Sinai Room</Link> downstairs is also available for private bookings during working hours for 25€/hour. Capacity: 12-15 people.</p>
+        <p>The <Link to="/gallery?photo=seminar-1.jpg">Sinai Room</Link> downstairs is also available for private bookings during working hours for 25€/hour. Capacity: 12-15 people.</p>
         <p>*The reservation is confirmed when a non-refundable 20% down payment is received. Cash or IBAN transfer only at this time.</p>
       </>
     ),
@@ -36,7 +36,11 @@ const faqs: FAQ[] = [
   },
   {
     question: "Do I have to be quiet?",
-    answer: `Not in our main coffee shop area! It may be quiet at times, but this is also where events, meetings, lectures, and conversations take place. If you're looking for somewhere quieter, the stacks room just off of the main coffee lounge area has space. The downstairs is designated a Quiet Zone at all times except for Mondays and Thursdays from 17:30-20:30.`,
+    answerJsx: (
+      <>
+        <p>Not in our main coffee shop area! It may be quiet at times, but this is also where events, meetings, lectures, and conversations take place. If you're looking for somewhere quieter, the <Link to="/gallery?photo=front-bookshelf-1.jpg">stacks room</Link> just off of the main coffee lounge area has space. The <Link to="/gallery?photo=basement-1.jpg">downstairs</Link> is designated a <Link to="/gallery?photo=basement-1.jpg">Quiet Zone</Link> at all times except for Mondays and Thursdays from 17:30-20:30.</p>
+      </>
+    ),
   },
   {
     question: "Can I borrow a book?",
