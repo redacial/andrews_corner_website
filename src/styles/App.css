@@ -324,6 +324,13 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
   margin-bottom: 0.75rem;
 }
 
+.faq-answer a {
+  color: var(--blue-dark);
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .faq-answer p:last-child {
   margin-bottom: 0;
 }
