@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
         muted
         playsInline
         className="hero-video"
-        src="/color-vid.mp4"
+        src="/ac-video.mp4"
       />
       <div className="hero-overlay" />
       <div className="hero-content container">
