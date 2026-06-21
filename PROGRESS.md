@@ -8,7 +8,7 @@
 - [x] **App.tsx ~30 lines**: Clean routing shell
 - [x] **Contact form**: Wired to Formspree (success/error state, controlled inputs)
 - [x] **Mobile hamburger menu**: Navbar rewrite with React state
-- [x] **Routing**: react-router-dom multi-page SPA (8 routes)
+- [x] **Routing**: react-router-dom multi-page SPA (7 routes)
 - [x] **Netlify _redirects**: SPA fallback configured
 - [x] **Logo path bug**: Fixed — Vite asset import, works in production build
 
@@ -24,28 +24,25 @@
 - [x] **Owner names**: Initially set to Andrew & Karly on OurStoryPage (later corrected to Daniel & Karly)
 - [x] **HoursSection**: Warm border added, owner names updated
 - [x] **OurStoryPage**: Created with staff bios section
-- [x] **MenuPage**: Created (placeholder for menu photo)
 - [x] **FAQ links**: Internal anchor links from FAQ answers to relevant pages
-- [x] **Navbar restructure**: "More" dropdown, all 8 routes linked
+- [x] **Navbar restructure**: "More" dropdown, all routes linked
 - [x] **variables.css**: Full design token system (colors, spacing, typography)
 
 #### SEO & Launch Readiness (Session 3 — Apr 20)
 - [x] **Meta description**: Descriptive sentence for Google search snippets
 - [x] **Meta keywords**: English + Greek terms for library, café, Thessaloniki
-- [x] **Canonical tag**: Points to production domain
+- [x] **Canonical tag**: Points to andrewscorner.org
 - [x] **Open Graph tags**: og:title, og:description, og:image, og:url, og:locale for social sharing
 - [x] **Twitter card tags**: summary_large_image card for Twitter/X link previews
 - [x] **hreflang tags**: Greek and English alternates declared for bilingual SEO
 - [x] **JSON-LD structured data**: Full LocalBusiness schema (CafeOrCoffeeShop + Library) with address, hours, phone, email, geo coordinates, amenities
-- [x] **Favicon**: Fixed to use `/favicon.svg` (was incorrectly pointing to Vite default)
-- [x] **Page title**: Updated to more descriptive "Community Café & Library Thessaloniki"
+- [x] **Favicon**: Fixed to use `/favicon.svg`
+- [x] **Page title**: Updated to "Community Café & Library Thessaloniki"
 - [x] **robots.txt**: Created in public/ — allows all crawlers, points to sitemap
-- [x] **sitemap.xml**: Created in public/ — all 8 routes with priorities and changefreq
-- [x] **RetreatPage Greek fix**: Was returning null (blank page) for Greek users — now shows Greek summary + contact email
-- [x] **Gallery alt text**: All 20 carousel images have descriptive, SEO-friendly alt attributes mentioning Andrew's Corner and Thessaloniki
-- [x] **Footer links**: Address links to Google Maps; Instagram and email added as clickable links
-- [x] **ContactSection directions**: Address now links to Google Maps with "Get Directions" / "Οδηγίες" label
-- [x] **Build errors fixed**: Removed unused `React` and `HoursSection` imports in App.tsx — production build now clean
+- [x] **sitemap.xml**: Created in public/ — all routes with priorities and changefreq
+- [x] **Gallery alt text**: All 20 carousel images have descriptive alt attributes
+- [x] **Footer links**: Address links to Google Maps; Instagram and email clickable
+- [x] **ContactSection directions**: Address links to Google Maps
 
 #### Content & Polish (Session 4 — Apr 20)
 - [x] **Owner names**: Changed from Andrew & Karly to Daniel & Karly on OurStoryPage
@@ -53,18 +50,49 @@
 - [x] **Gallery cream background**: Full-width cream band matching About section style
 - [x] **FAQ photo links**: Stacks room → photo 5/20, Sinai Room → photo 19/20, Quiet Zone → photo 2/20
 - [x] **Phone number**: Reformatted to +30 2310 832 265 in ContactSection
-- [x] **John 12:20 reference**: Removed trailing "ff" in about.json Why Andrew's Corner paragraph
-- [x] **Bible verse tooltips**: Hover tooltips on John 12:20 and John 12:28 fetch live verse text from bible-api.com (World English Bible, public domain) — walnut styled popup with verse label
+- [x] **John 12:20 reference**: Removed trailing "ff" in about.json
+- [x] **Bible verse tooltips**: Hover tooltips on John 12:20 and John 12:28 — fetches live verse from bible-api.com (WEB, public domain)
 
-### Post-Launch Steps (manual — no code needed)
-- [ ] **Google Search Console**: Add domain, verify ownership, submit sitemap.xml
-- [ ] **Google Analytics**: Add GA4 script tag (or Plausible for privacy-friendly alternative)
-- [ ] **Google Business Profile**: Get admin access, link website, add photos
-- [ ] **Update domain in index.html**: Replace `andrewscorner.org` placeholder with actual live domain in canonical/og/sitemap URLs once confirmed
+#### Launch Session (Session 5 — Jun 20)
+- [x] **Menu page removed**: Andrew requested café be de-emphasized — MenuPage.tsx deleted, all nav links removed
+- [x] **Our Story promoted**: Moved from "More" dropdown to main navbar
+- [x] **Our Story content**: Full story text from Daniel's email added to OurStoryPage.tsx
+- [x] **Daniel & Karly photo**: Added to Our Story page and Familiar Faces (first card)
+- [x] **Apartment photos**: 9 photos added to Retreat page as a carousel (apt-1.jpg through apt-9.jpg)
+- [x] **Greek side**: Global "coming soon" screen replaces all partial Greek content — clean and intentional
+- [x] **Default language**: Changed from Greek to English — site opens in EN
+- [x] **Netlify connected**: Site live at andrewcornerwebsite.netlify.app, deploying from GitHub main
+- [x] **Domain added in Netlify**: andrewscorner.org added, pending DNS verification
+- [x] **README overhauled**: All external services documented, Netlify + DNS instructions included
+- [x] **Repo pushed**: GitHub fully up to date
 
-### Known Content Gaps (still needed)
-- [ ] Greek FAQ content (3 placeholders in FAQSection.tsx)
-- [ ] GiveButter embed code (DonatePage is placeholder)
-- [ ] Menu photo/PDF (MenuPage is placeholder)
-- [ ] Staff bios — Daniel, Karly, Vasilea, Mixalis, Myrto (all say "coming soon")
-- [ ] Greek translations for About and Our Story sections (partial placeholders)
+### Waiting On (as of Jun 20)
+
+- [ ] **Daniel — Namecheap DNS**: Must log into namecheap.com and set custom nameservers to:
+  - `dns1.p06.nsone.net`
+  - `dns2.p06.nsone.net`
+  - `dns3.p06.nsone.net`
+  - `dns4.p06.nsone.net`
+  - Once done, site goes live at andrewscorner.org and HTTPS activates automatically
+- [ ] **Formspree test**: Send a test message through the contact form on the live site and confirm it arrives at Ella's inbox. Form ID is `xpqovoba`, managed at formspree.io under Ella's account.
+- [ ] **GiveButter embed**: Daniel is working on a GiveButter campaign link. When received, replace placeholder in `src/components/DonationSection.tsx`
+- [ ] **Staff bios**: Daniel will write bios for Daniel & Karly, Vasilea, Mixalis, Myrto. Update `src/components/FamiliarFaces.tsx` — the `bio` field on each staff object.
+
+### Future Work (next session)
+
+- [ ] **Greek translation**: Full Greek version — currently shows a "coming soon" screen. All components already have `language === 'el'` branches ready for content.
+- [ ] **Google Search Console**: Add andrewscorner.org, verify ownership, submit `/sitemap.xml` so Google indexes the site
+- [ ] **Google Analytics**: Add GA4 script tag to index.html for visitor tracking
+- [ ] **Google Business Profile**: Link website, add photos, manage reviews
+- [ ] **Staff bios**: Once Daniel writes them, update FamiliarFaces.tsx bio fields and remove "coming soon" text
+
+### External Services Reference
+
+| Service | Purpose | Account | Notes |
+|---|---|---|---|
+| Netlify | Hosting + auto-deploy | davidmele123@yahoo.com | Connected to GitHub main branch |
+| AndrewsCorner.org | Domain | Daniel Napier — Namecheap | Needs nameservers updated |
+| Formspree `xpqovoba` | Contact form emails | ellamcmillan2005@gmail.com | Verify destination email |
+| Ashrei LibraryASP | Library catalog | Daniel manages | `ashrei.libertyasp.co.uk/library/libraryHome.do` |
+| GiveButter | Donations | Daniel setting up | Embed code pending |
+| Instagram | Social | `@andrewscorner.skg` | Linked in footer + contact |
