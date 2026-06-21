@@ -3,6 +3,11 @@ import { useLanguage } from '../context/LanguageContext';
 
 const staff = [
   {
+    file: 'Daniel_Karly.jpg',
+    name: 'Daniel & Karly',
+    bio: 'Founding directors of Andrew\'s Corner. Bio coming soon.',
+  },
+  {
     file: 'Vasilea1.jpg',
     name: 'Vasilea',
     bio: 'Bio coming soon.',
