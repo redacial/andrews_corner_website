@@ -57,6 +57,97 @@ h3 { font-size: 1.75rem; margin-bottom: var(--space-sm); }
 
 .iframe-container { margin-top: var(--space-sm); }
 
+/* ─── Donation Section ───────────────────────────────────────────────────── */
+.donation-section {
+  background: linear-gradient(135deg, var(--walnut) 0%, var(--chestnut) 100%);
+  padding: var(--space-lg) 0;
+  text-align: center;
+}
+
+.donation-inner {
+  max-width: 760px;
+}
+
+.donation-heading {
+  color: var(--cream);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.donation-tagline {
+  color: var(--blue-light);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 auto var(--space-md);
+}
+
+.donation-impact-row {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.donation-impact-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  flex: 1 1 180px;
+  max-width: 220px;
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.impact-icon {
+  display: block;
+  font-size: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.donation-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.donation-btn {
+  display: inline-block;
+  background-color: var(--cream);
+  color: var(--walnut);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.donation-btn:hover {
+  background-color: var(--blue-light);
+  color: var(--walnut);
+  transform: translateY(-2px);
+}
+
+.donation-note {
+  color: rgba(249,247,242,0.6);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .donation-impact-row { flex-direction: column; align-items: center; }
+  .donation-impact-card { max-width: 100%; width: 100%; }
+  .donation-btn { width: 100%; text-align: center; padding: 1rem; }
+}
+
 /* ─── Contact Section ────────────────────────────────────────────────────── */
 .contact-form { margin-top: var(--space-sm); }
 .form-group { margin-bottom: var(--space-sm); display: flex; flex-direction: column; }
