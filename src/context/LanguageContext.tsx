@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 
 type Language = 'el' | 'en';
@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.title': 'Εκδηλώσεις & Ωράριο Λειτουργίας',
     'retreat.title': 'Retreat & Σαββατοκύριακα',
     'nav.gallery': 'Γκαλερί',
-    'nav.more': 'Πιο',
+    'nav.more': 'Περισσότερα',
     'nav.menu': 'Μενού',
     'nav.our-story': 'Η Ιστορία μας',
   },
@@ -64,6 +64,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const t = (key: string) => {
     return translations[language][key] || key;

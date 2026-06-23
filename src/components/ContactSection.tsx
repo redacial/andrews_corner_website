@@ -41,10 +41,11 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="container contact-section grid">
       <div className="contact-form-side">
         <h2>{t('contact.title')}</h2>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={e => { e.preventDefault(); handleSubmit(); }}>
           <div className="form-group">
-            <label>{t('contact.name')}</label>
+            <label htmlFor="contact-name">{t('contact.name')}</label>
             <input
+              id="contact-name"
               type="text"
               name="name"
               value={name}
@@ -52,8 +53,9 @@ const ContactSection: React.FC = () => {
             />
           </div>
           <div className="form-group">
-            <label>{t('contact.email')}</label>
+            <label htmlFor="contact-email">{t('contact.email')}</label>
             <input
+              id="contact-email"
               type="email"
               name="email"
               value={email}
@@ -61,8 +63,9 @@ const ContactSection: React.FC = () => {
             />
           </div>
           <div className="form-group">
-            <label>{t('contact.message')}</label>
+            <label htmlFor="contact-message">{t('contact.message')}</label>
             <textarea
+              id="contact-message"
               rows={5}
               name="message"
               value={message}
@@ -71,20 +74,19 @@ const ContactSection: React.FC = () => {
           </div>
 
           {status === 'success' && (
-            <p style={{ color: 'green', marginBottom: 'var(--space-sm)' }}>
+            <p className="status-success" style={{ marginBottom: 'var(--space-sm)' }}>
               {language === 'el' ? 'Το μήνυμά σας εστάλη!' : 'Your message was sent successfully!'}
             </p>
           )}
           {status === 'error' && (
-            <p style={{ color: 'red', marginBottom: 'var(--space-sm)' }}>
+            <p className="status-error" style={{ marginBottom: 'var(--space-sm)' }}>
               {language === 'el' ? 'Κάτι πήγε στραβά. Δοκιμάστε ξανά.' : 'Something went wrong. Please try again.'}
             </p>
           )}
 
           <button
-            type="button"
+            type="submit"
             className="btn-primary"
-            onClick={handleSubmit}
             disabled={status === 'sending'}
           >
             {status === 'sending'

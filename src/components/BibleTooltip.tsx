@@ -28,8 +28,23 @@ const BibleTooltip: React.FC<BibleTooltipProps> = ({ reference, display }) => {
     }
   };
 
+  const handleClick = () => {
+    setVisible(v => !v);
+    if (!fetchedRef.current) {
+      handleMouseEnter();
+    }
+  };
+
   return (
-    <span className="bible-tooltip-wrap" onMouseEnter={handleMouseEnter} onMouseLeave={() => setVisible(false)}>
+    <span
+      className="bible-tooltip-wrap"
+      tabIndex={0}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={() => setVisible(false)}
+      onFocus={() => setVisible(true)}
+      onBlur={() => setVisible(false)}
+      onClick={handleClick}
+    >
       <span className="bible-ref">{display}</span>
       {visible && (
         <span className="bible-tooltip">

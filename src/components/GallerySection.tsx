@@ -77,13 +77,17 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
         <button className="carousel-arrow" onClick={prev} aria-label="Previous photo">&#8592;</button>
 
         <div className="carousel-inner">
-          <div className="carousel-side" onClick={prev}>
+          <button
+            className="carousel-side"
+            onClick={prev}
+            aria-label={`View previous photo: ${carouselPhotos[prevIdx].alt}`}
+          >
             <img
               src={`/photos/${carouselPhotos[prevIdx].file}`}
               alt={carouselPhotos[prevIdx].alt}
               className="carousel-thumb"
             />
-          </div>
+          </button>
 
           <div className="carousel-main">
             <img
@@ -93,13 +97,17 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
             />
           </div>
 
-          <div className="carousel-side" onClick={next}>
+          <button
+            className="carousel-side"
+            onClick={next}
+            aria-label={`View next photo: ${carouselPhotos[nextIdx].alt}`}
+          >
             <img
               src={`/photos/${carouselPhotos[nextIdx].file}`}
               alt={carouselPhotos[nextIdx].alt}
               className="carousel-thumb"
             />
-          </div>
+          </button>
         </div>
 
         <button className="carousel-arrow" onClick={next} aria-label="Next photo">&#8594;</button>
@@ -107,7 +115,7 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
       <p className="carousel-counter">{current + 1} / {total}</p>
 
       {/* Videos */}
-      <h3 style={{ marginTop: 'var(--space-lg)' }}>
+      <h3 className="gallery-lectures-heading">
         {language === 'el' ? 'Διαλέξεις' : 'Lectures'}
       </h3>
       <div className="video-grid">
@@ -118,7 +126,6 @@ const GallerySection: React.FC<GallerySectionProps> = ({ initialPhoto }) => {
                 src={`https://www.youtube.com/embed/${video.id}`}
                 title={video.title}
                 allowFullScreen
-                style={{ border: 'none' }}
               />
             </div>
             <p className="video-title">{video.title}</p>

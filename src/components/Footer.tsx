@@ -5,19 +5,19 @@ const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Spartis+12+The
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <div className="container" style={{ textAlign: 'center' }}>
+      <div className="container footer-inner">
         <p>
           &copy; {new Date().getFullYear()} Andrew's Corner &mdash;{' '}
-          <a href={MAPS_URL} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+          <a href={MAPS_URL} target="_blank" rel="noreferrer" className="footer-address">
             Spartis 12, Thessaloniki 54640, Greece
           </a>
         </p>
-        <p style={{ marginTop: '0.4rem', fontSize: '0.9rem' }}>
-          <a href="https://instagram.com/andrewscorner.skg" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>
+        <p className="footer-links">
+          <a href="https://instagram.com/andrewscorner.skg" target="_blank" rel="noreferrer" className="footer-link">
             @andrewscorner.skg
           </a>
           {' · '}
-          <a href="mailto:StAndrewsCorner@gmail.com" style={{ color: 'inherit' }}>
+          <a href="mailto:StAndrewsCorner@gmail.com" className="footer-link">
             StAndrewsCorner@gmail.com
           </a>
         </p>

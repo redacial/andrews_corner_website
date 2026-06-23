@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const staff = [
@@ -26,6 +26,7 @@ const staff = [
 
 const FamiliarFaces: React.FC = () => {
   const { language } = useLanguage();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <div className="familiar-faces">
@@ -33,15 +34,22 @@ const FamiliarFaces: React.FC = () => {
         {language === 'el' ? 'Οικεία Πρόσωπα' : 'Familiar Faces'}
       </h2>
       <div className="familiar-faces-grid">
-        {staff.map(person => (
-          <div key={person.name} className="face-card">
+        {staff.map((person, i) => (
+          <div
+            key={person.name}
+            className="face-card"
+            onClick={() => setActiveIndex(activeIndex === i ? null : i)}
+          >
             <div className="face-img-wrap">
               <img
                 src={`/photos/${person.file}`}
                 alt={person.name}
                 className="face-img"
               />
-              <div className="face-bio-overlay">
+              <div
+                className="face-bio-overlay"
+                style={activeIndex === i ? { opacity: 1, transform: 'translateY(0)' } : undefined}
+              >
                 <p>{person.bio}</p>
               </div>
             </div>

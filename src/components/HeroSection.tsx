@@ -12,6 +12,7 @@ const HeroSection: React.FC = () => {
         playsInline
         className="hero-video"
         src="/ac-video.mp4"
+        aria-hidden="true"
       />
       <div className="hero-overlay" />
       <div className="hero-content container">

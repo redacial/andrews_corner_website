@@ -80,21 +80,12 @@ button {
   padding: 0 var(--space-md);
 }
 
-section {
-  padding: var(--space-lg) 0;
-  border-bottom: none;
-}
-
 /* Specific spacing for sections */
 .about-section {
   margin-bottom: var(--space-md);
   padding-top: var(--space-md);
   padding-bottom: var(--space-sm);
   margin-top: var(--space-md);
-}
-
-#events {
-  border-bottom: none;
 }
 
 .hero {
@@ -143,10 +134,6 @@ section {
   background-color: var(--white);
 }
 
-#events {
-  margin-bottom: var(--space-xl);
-}
-
 #library {
   padding-top: var(--space-sm);
   padding-bottom: var(--space-md);
@@ -167,21 +154,6 @@ section {
 .retreat-section {
   padding-top: var(--space-md);
   padding-bottom: var(--space-lg);
-}
-
-.donation-section {
-  margin-bottom: var(--space-xl);
-  padding-top: var(--space-sm);
-  padding-bottom: var(--space-md);
-}
-
-.donation-section h2 {
-  margin-bottom: var(--space-sm);
-}
-
-.donation-section p {
-  text-align: center;
-  margin-bottom: var(--space-sm);
 }
 
 #contact {

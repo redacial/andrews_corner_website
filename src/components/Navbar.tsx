@@ -96,8 +96,10 @@ const Navbar: React.FC = () => {
             <button
               className={`more-btn ${moreLinks.some(l => l.path === location.pathname) ? 'active' : ''}`}
               onClick={() => setMoreOpen(!moreOpen)}
+              aria-expanded={moreOpen}
+              aria-haspopup="true"
             >
-              {t('nav.more')} <span style={{ fontSize: '0.7rem', verticalAlign: 'middle' }}>▼</span>
+              {t('nav.more')} <span className="more-chevron">▼</span>
             </button>
             {moreOpen && (
               <ul className="more-menu">

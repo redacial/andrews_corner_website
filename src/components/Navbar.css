@@ -79,6 +79,11 @@
   color: var(--chestnut);
 }
 
+.more-chevron {
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
 .more-menu {
   position: absolute;
   top: calc(100% + 0.75rem);
@@ -127,10 +132,11 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--walnut);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0.8;
+  min-height: 44px;
 }
 
 .lang-switcher button.active {
@@ -149,6 +155,8 @@
   border: none;
   cursor: pointer;
   padding: 0.25rem;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .hamburger span {

@@ -102,12 +102,22 @@ const FAQSection: React.FC = () => {
       <div className="faq-list">
         {activeFaqs.map((faq, index) => (
           <div key={index} className="faq-item">
-            <button className="faq-question" onClick={() => toggle(index)}>
+            <button
+              className="faq-question"
+              onClick={() => toggle(index)}
+              aria-expanded={openIndex === index}
+              aria-controls={`faq-answer-${index}`}
+              id={`faq-btn-${index}`}
+            >
               <span>{faq.question}</span>
               <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
             </button>
             {openIndex === index && (
-              <div className="faq-answer">
+              <div
+                className="faq-answer"
+                id={`faq-answer-${index}`}
+                aria-labelledby={`faq-btn-${index}`}
+              >
                 {faq.answerJsx
                   ? faq.answerJsx
                   : faq.answer!.split('\n').map((line, i) => (

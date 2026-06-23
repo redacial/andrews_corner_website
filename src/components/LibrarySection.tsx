@@ -8,12 +8,12 @@ const LibrarySection: React.FC = () => {
     <section id="library" className="container">
       <h2>{t('library.title')}</h2>
       <div className="library-box">
-        <p className="content-p" style={{ textAlign: 'center' }}>
+        <p className="content-p library-text-center">
           {language === 'el'
             ? 'Η βιβλιοθήκη μας διαθέτει πάνω από 30.000 τόμους.'
             : 'Our library contains over 30,000 volumes across theology, philosophy, literature, and more.'}
         </p>
-        <div style={{ textAlign: 'center', marginTop: 'var(--space-sm)' }}>
+        <div className="library-cta-wrap">
           <a href="https://ashrei.libertyasp.co.uk/library/libraryHome.do" target="_blank" rel="noreferrer" className="btn-primary">
             {language === 'el' ? 'Περιήγηση στον Κατάλογο' : 'Browse the Catalog'}
           </a>

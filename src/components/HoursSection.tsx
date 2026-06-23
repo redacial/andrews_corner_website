@@ -8,7 +8,7 @@ const HoursSection: React.FC = () => {
 
   return (
     <section id="hours" className="container hours-section">
-      <h3>{language === 'el' ? 'Ωράριο' : 'Opening Hours'}</h3>
+      <h2>{language === 'el' ? 'Ωράριο' : 'Opening Hours'}</h2>
       <div className="hours-box">
         <table className="hours-table">
           <tbody>
