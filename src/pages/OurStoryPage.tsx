@@ -48,14 +48,14 @@ const OurStoryPage: React.FC = () => {
           <div className="our-story-bio">
             <h3>Daniel & Karly Napier</h3>
             <p className="content-p">
-              Our primary collection was once the library for Austin Graduate School of Theology, in Austin, Texas. (For its final two years, Austin Grad was subsumed by and operated as Lipscomb University's Austin Center). Daniel Napier (Ph.D. Vrije Universiteit Amsterdam), our founding director, is an alumnus who later served at Austin Grad as professor of Scripture and Theology.
+              Our primary collection was once the library for Austin Graduate School of Theology, in Austin, Texas. Daniel Napier (Ph.D. Vrije Universiteit Amsterdam), our founding director, is an alumnus who later served at Austin Grad as professor of Scripture and Theology. (For its final two years, Austin Grad was subsumed by and operated as Lipscomb University's Austin Center). Here's the story, in Daniel's own words, of how that library became part of Andrew's Corner.
             </p>
           </div>
         </div>
 
         <div className="our-story-body">
           <p className="content-p">
-            In late 2018, Daniel and Karly relocated to Greece in order to work with those Middle Eastern refugees who were turning to Christ. For five years we ran an apprenticeship program to develop lay leaders among Middle Eastern converts to Christianity. While the refugees provided the occasion for our move, Greece herself, with her distinctive history and spiritual climate, also tugged at something deep within us.
+            In late 2018, we (Daniel and Karly Napier) relocated to Greece in order to work with those Middle Eastern refugees who were turning to Christ. For five years we ran an apprenticeship program to develop lay leaders among Middle Eastern converts to Christianity. While the refugees provided the occasion for our move, Greece herself, with her distinctive history and spiritual climate, also tugged at something deep within us.
           </p>
 
           <p className="content-p">
@@ -71,7 +71,7 @@ const OurStoryPage: React.FC = () => {
           </p>
 
           <p className="content-p">
-            After the purchase, during the long process of set up, we learned about Kyriakos Maximiadis. Kyriakos, the father of our friend Amy, was a saintly layman with a passionate vision for theological literacy and education. For forty years he advocated for the creation of a library and biblical study center in Thessaloniki. He asked people everywhere from Athens to Chicago to create such a place for his city. He prayed and advocated tirelessly for it over the course of decades. Nothing discernable happened. He entered into his rest in 2022 without any visible answer to his prayers.
+            After the purchase, during the long process of setting up, we learned about Kyriakos Maximiadis. Kyriakos, the father of our friend Amy, was a saintly layman with a passionate vision for theological literacy and education. For forty years he advocated for the creation of a library and biblical study center in Thessaloniki. He asked people everywhere from Athens to Chicago to create such a place for his city. He prayed and advocated tirelessly for it over the course of decades. Nothing discernable happened. He entered into his rest in 2022 without any visible answer to his prayers.
           </p>
 
           <p className="content-p">
@@ -79,7 +79,7 @@ const OurStoryPage: React.FC = () => {
           </p>
 
           <p className="content-p">
-            Through an equally unlikely turn of events, we were introduced to Metropolitan Philotheos of Thessaloniki, who received us with a Christ-like kindness we'd never dared to hope for. As we shared a meal at my dining room table, I shared our hopes, in detail, for the initiative and asked for his guidance and blessing. At the time, the initiative was nameless – we didn't yet know what to call it. But something happened as I shared with Metropolitan Philotheos. I told him how the Apostle Andrew was the model and inspiration for our peculiar approach. We would introduce secular people to Jesus and then trust Jesus to guide them where he wants them. As I shared, suddenly the name was there. "Andrew's Corner!" – that's what we've been praying and hoping and building into existence for the last three years.
+            Through an equally unlikely turn of events, we were introduced to Metropolitan Philotheos of Thessaloniki, who received us with a Christ-like kindness we'd never dared to hope for. As we shared a meal at my dining room table, I (Daniel) shared our hopes, in detail, for the initiative and asked for his guidance and blessing. At the time, the initiative was nameless – we didn't yet know what to call it. But something happened as I shared with Metropolitan Philotheos. I told him how the Apostle Andrew was the model and inspiration for our peculiar approach. We would introduce secular people to Jesus and then trust Jesus to guide them where he wants them. As I shared, suddenly the name was there. "Andrew's Corner!" – that's what we've been praying and hoping and building into existence for the last three years.
           </p>
 
           <p className="content-p">
