@@ -63,8 +63,8 @@ const faqs: FAQ[] = [
     answer: `We accept most books that fall in the "Humanities" domain. Due to limited space, we must be discerning. If your books are not added to our shelves, we put them in a "Give-away" box. If you donate upwards of 100 books, we will gratefully designate each book in our catalogue as coming from your collection.`,
   },
   {
-    question: "Is Andrew's Corner affiliated with a church or religious organisation?",
-    answer: `No. The books and property for Andrew's Corner are privately owned by Daniel Napier, who makes them available for all of us. The café is legally owned and operated by a Greek nonprofit called the Organisation for the Research and Dissemination of Theology and Philosophy. Although we are independent, we intentionally operate in grateful deference to Metropolitan Philotheos of Thessaloniki.`,
+    question: "Is Andrew's Corner operated by a church or religious organization?",
+    answer: `No. The books and property for Andrew's Corner are privately owned by our director, who makes them available for all of us. The café is legally owned and operated by a Greek nonprofit called the Organisation for the Research and Dissemination of Theology and Philosophy. Although we are independent, we intentionally operate in grateful deference to Metropolitan Philotheos of Thessaloniki.`,
   },
   {
     question: "What languages are spoken at Andrew's Corner?",
